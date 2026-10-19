@@ -1,0 +1,261 @@
+/* General Settings */
+:root {
+    --background: #0b1020;
+    --card-background: #151d32;
+    --primary-color: #8b5cf6;
+    --text-color: #f5f5f5;
+    --muted-color: #b6bfd3;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+}
+
+body {
+    margin: 0;
+    background-color: var(--background);
+    color: var(--text-color);
+    font-family: Arial, sans-serif;
+    line-height: 1.7;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #10172a;
+    padding: 18px 0;
+    border-bottom: 1px solid #27314a;
+}
+
+.navbar-brand {
+    color: var(--text-color);
+    font-size: 1.4rem;
+}
+
+.nav-link {
+    color: var(--muted-color);
+    margin-left: 12px;
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: #a78bfa;
+}
+
+/* Home Section */
+.hero {
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 0;
+    background: radial-gradient(circle at top, #202044, var(--background) 65%);
+}
+
+.welcome {
+    color: #a78bfa;
+    letter-spacing: 3px;
+    font-size: 0.85rem;
+    font-weight: bold;
+}
+
+.hero h1 {
+    font-size: clamp(2.2rem, 5vw, 4rem);
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+.hero h1 span {
+    color: var(--primary-color);
+}
+
+.hero h2 {
+    color: var(--muted-color);
+    font-size: clamp(1.2rem, 3vw, 2rem);
+}
+
+.hero-text {
+    max-width: 600px;
+    margin: 20px auto;
+    color: var(--muted-color);
+}
+
+/* Buttons */
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    padding: 10px 22px;
+}
+
+.btn-primary:hover {
+    background-color: #7042d6;
+    border-color: #7042d6;
+}
+
+.btn-outline-light {
+    padding: 10px 22px;
+    margin-left: 8px;
+}
+
+/* General Sections */
+.section {
+    padding: 85px 0;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.2rem;
+    font-weight: bold;
+    margin-bottom: 45px;
+}
+
+.section-title::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: var(--primary-color);
+    margin: 14px auto 0;
+    border-radius: 5px;
+}
+
+/* About */
+.about-card {
+    max-width: 800px;
+    margin: auto;
+    padding: 30px;
+    background-color: var(--card-background);
+    border: 1px solid #29334b;
+    border-radius: 15px;
+    color: var(--muted-color);
+    text-align: center;
+}
+
+/* Skills */
+.skill-card {
+    height: 100%;
+    padding: 30px 20px;
+    text-align: center;
+    background-color: var(--card-background);
+    border: 1px solid #29334b;
+    border-radius: 15px;
+    transition: transform 0.3s, border-color 0.3s;
+}
+
+.skill-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--primary-color);
+}
+
+.skill-card h3 {
+    color: #a78bfa;
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+}
+
+.skill-card p {
+    color: var(--muted-color);
+    margin-bottom: 0;
+}
+
+/* Projects */
+.project-card {
+    height: 100%;
+    padding: 28px;
+    background-color: var(--card-background);
+    border: 1px solid #29334b;
+    border-radius: 15px;
+    transition: transform 0.3s, border-color 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--primary-color);
+}
+
+.project-number {
+    color: var(--primary-color);
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.project-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 12px;
+}
+
+.project-card p {
+    color: var(--muted-color);
+}
+
+.project-tag {
+    display: inline-block;
+    color: #c4b5fd;
+    background-color: #292047;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+}
+
+/* Contact */
+.contact-text {
+    color: var(--muted-color);
+    margin-bottom: 25px;
+}
+
+#contact a:not(.btn) {
+    color: #a78bfa;
+    text-decoration: none;
+}
+
+#contact a:not(.btn):hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+.footer {
+    padding: 22px 0;
+    background-color: #10172a;
+    border-top: 1px solid #27314a;
+    color: var(--muted-color);
+}
+
+.footer p {
+    margin: 0;
+}
+
+/* Mobile Screens */
+@media (max-width: 767px) {
+    .hero {
+        min-height: 75vh;
+        padding: 80px 0;
+    }
+
+    .section {
+        padding: 60px 0;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+        margin-bottom: 30px;
+    }
+
+    .btn-outline-light {
+        margin-left: 0;
+    }
+
+    .nav-link {
+        margin-left: 0;
+    }
+}.profile-img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 50%;
+}.age {
+    color: #b0b0b0;
+    font-size: 16px;
+    margin-top: 8px;
+    margin-bottom: 15px;
+}
